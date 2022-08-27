@@ -28,16 +28,14 @@ let obj= {
     
   }
 };
-
 let clone = Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
 );
 
-console.log(clone);
+console.log('c1',clone);
+clone.eats=100
+console.log('c2',clone);
 
-obj.eats=100
-console.log(clone);
-
-
+console.log(obj);
 
