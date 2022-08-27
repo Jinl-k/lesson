@@ -21,21 +21,19 @@
   console.log(obj)
 } */
 
-let obj= {
+let obj = {
   eats: true,
-  age(){
-    console.log(111);
-    
-  }
-};
+  age() {
+    console.log(111)
+  },
+}
 let clone = Object.create(
   Object.getPrototypeOf(obj),
   Object.getOwnPropertyDescriptors(obj)
-);
+)
 
-console.log('c1',clone);
-clone.eats=100
-console.log('c2',clone);
+console.log("c-1", JSON.stringify(clone))
+clone.eats = 100
+console.log("c-2", JSON.stringify(clone))
 
-console.log(obj);
-
+console.log(JSON.stringify(obj))
